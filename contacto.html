@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contacto | Kairos-Fiscal</title>
+  <meta name="description" content="Envíanos tu caso. Respondemos en el día.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="/"><span class="brand-k">K</span>airos<span class="brand-dash">-</span>Fiscal</a>
+    <nav class="nav">
+      <a href="index.html">Inicio</a>
+    </nav>
+  </div>
+</header>
+
+<main class="section">
+  <div class="container" style="max-width:760px">
+    <h1>Contacto</h1>
+    <p class="lead">Cuéntame tu caso en 2 minutos. Te responderé por correo o WhatsApp.</p>
+
+    <!-- FormSubmit.co: envía el formulario por email sin backend -->
+    <form class="card" method="POST" action="https://formsubmit.co/CarlosDRM@PROTONMAIL.COM">
+      <!-- Protecciones básicas -->
+      <input type="hidden" name="_subject" value="Nuevo mensaje desde kairos-fiscal.com">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="https://kairos-fiscal.com/gracias.html">
+      <p style="display:none;">
+        <label>Si eres humano, deja este campo vacío <input name="_honey"></label>
+      </p>
+
+      <label>Nombre<br><input type="text" name="nombre" required></label>
+      <label>Correo electrónico<br><input type="email" name="email" required></label>
+      <label>WhatsApp (opcional)<br><input type="text" name="whatsapp" placeholder="+52 ..."></label>
+      <label>Asunto<br><input type="text" name="asunto" required></label>
+      <label>Mensaje<br><textarea name="mensaje" rows="6" required></textarea></label>
+      <button class="btn btn-primary" type="submit">Enviar</button>
+    </form>
+
+    <p class="micro">Al enviar aceptas nuestro tratamiento de datos para contactarte sobre tu solicitud.</p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>
+      <strong>Kairos-Fiscal</strong><br>
+      Despacho Fiscal-Administrativo<br>
+      Querétaro, México
+    </div>
+    <div><a href="index.html">Inicio</a></div>
+  </div>
+</footer>
+</body>
+</html>
