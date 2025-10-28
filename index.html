@@ -3,116 +3,140 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Kairos-Fiscal | Abogado fiscal — Estrategias y defensas contra actos tributarios</title>
-  <meta name="description" content="Estrategias y defensas contra actos de autoridades tributarias. Representación ante PRODECON y TFJA. Atención en Querétaro, CDMX y el Bajío. Más de 12 años de experiencia." />
-  <link rel="canonical" href="https://kairos-fiscal.com/" />
+  <title>Servicios | Kairos-Fiscal — Defensa y estrategia fiscal</title>
+  <meta name="description" content="Servicios legales en materia fiscal y administrativa: auditorías SAT, acuerdos conclusivos PRODECON, juicios de nulidad TFJA, amparos, devoluciones y acreditamientos de IVA, cancelación de sellos y desbloqueo de cuentas. Más de 12 años de experiencia." />
+  <link rel="canonical" href="https://kairos-fiscal.com/servicios" />
   <link rel="icon" href="/assets/logo-kairos.png" />
-
   <style>
-    :root{
-      --bg:#f3f4f6;         /* fondo gris metálico suave */
-      --fg:#0f172a;         /* texto principal */
-      --muted:#475569;      /* texto secundario */
-      --brand:#1e40af;      /* azul marino */
-      --brand-2:#0ea5e9;    /* azul claro acento */
-      --chip:#e2e8f0;       /* chip fondo */
-      --chip-b:#cbd5e1;     /* chip borde */
-      --ring: rgba(14,165,233,.35);
-      --maxw:1100px;
-    }
+    :root{ --bg:#f3f4f6; --fg:#0f172a; --muted:#475569; --brand:#1e40af; --chip:#e2e8f0; --chip-b:#cbd5e1; --maxw:1100px; }
     *{box-sizing:border-box}
     html,body{height:100%}
     body{margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; color:var(--fg); background:var(--bg)}
     a{ color:var(--brand); text-decoration:none }
     a:hover{ text-decoration:underline }
     .wrap{ max-width:var(--maxw); margin:0 auto; padding:24px }
-
-    /* NAV */
     .nav{ position:sticky; top:0; background:#fff; border-bottom:1px solid #e2e8f0; z-index:10 }
     .nav-inner{ display:flex; align-items:center; justify-content:space-between; }
     .brand{ display:flex; align-items:center; gap:10px; font-weight:800; color:var(--brand) }
-    .brand img{ width:70px; height:70px; object-fit:contain; }
-    .mini{ font-size:13px; color:var(--muted) }
+    .brand img{ width:44px; height:44px; object-fit:contain; }
+    .mini{ font-size:13px; color:var(--muted); display:flex; gap:14px }
 
-    /* HERO */
-    .hero{ padding: clamp(54px, 7vw, 110px) 0; text-align:center; }
-    .hero img{ width:120px; height:120px; object-fit:contain; border-radius:50%; box-shadow: 0 4px 18px rgba(0,0,0,0.25); margin-bottom:10px; }
-    .hero .tagline{ font-size:18px; font-weight:600; color:#334155; margin-bottom:30px; }
-    h1{ font-size: clamp(28px, 4vw, 46px); line-height:1.15; margin:0 0 12px }
-    .sub{ font-size: clamp(16px, 2vw, 20px); color:var(--muted); max-width:68ch; margin: 0 auto; }
+    .page-head{ padding:36px 0 8px }
+    h1{ font-size: clamp(28px, 4vw, 40px); margin:0 }
+    p.lead{ color:var(--muted); max-width:70ch; margin-top:10px }
 
-    .bullets{ display:flex; justify-content:center; flex-wrap:wrap; gap:8px; margin:20px 0 26px }
-    .chip{ font-size:14px; color:#0f172a; background:var(--chip); border:1px solid var(--chip-b); padding:8px 12px; border-radius:999px }
+    .grid{ display:grid; grid-template-columns: 1fr; gap:16px; margin:22px 0 38px }
+    @media (min-width: 860px){ .grid{ grid-template-columns: repeat(3, 1fr) } }
 
-    .cta{ display:flex; justify-content:center; flex-wrap:wrap; gap:12px; margin-top:10px }
-    .btn{ display:inline-flex; align-items:center; gap:8px; padding:12px 18px; border-radius:10px; font-weight:700; border:1px solid transparent }
-    .btn.primary{ background:var(--brand); color:#fff }
-    .btn.primary:focus-visible{ outline:2px solid var(--ring); outline-offset:2px }
-    .btn.secondary{ background:#fff; color:var(--brand); border-color:#cbd5e1 }
-    .btn.secondary:hover{ background:#f8fafc }
+    .card{ border:1px solid #e2e8f0; background:#fff; border-radius:14px; padding:18px; display:flex; flex-direction:column; gap:10px }
+    .card h3{ margin:0; font-size:20px }
+    .card p{ margin:0; color:var(--muted) }
+    .card .cta{ margin-top:auto }
+    .btn{ display:inline-flex; align-items:center; gap:8px; padding:10px 14px; border-radius:10px; font-weight:700; border:1px solid #cbd5e1; background:#fff; color:var(--brand) }
+    .btn.primary{ background:var(--brand); color:#fff; border-color:transparent }
 
-    .meta{ display:flex; justify-content:center; gap:16px; align-items:center; margin-top:16px; color:var(--muted); font-size:14px; flex-wrap:wrap; }
+    .note{ font-size:13px; color:#64748b; border-left:3px solid #cbd5e1; padding-left:10px }
 
-    .card{ border:1px solid #e2e8f0; background:#fff; border-radius:14px; padding:18px }
+    .cta-band{ background:#fff; border:1px solid #e2e8f0; border-radius:14px; padding:22px; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:14px }
+    .cta-actions{ display:flex; gap:12px; flex-wrap:wrap }
 
     footer{ border-top:1px solid #e2e8f0; color:var(--muted); font-size:14px; padding:24px 0 48px; text-align:center }
-
   </style>
 </head>
 <body>
   <header class="nav" role="banner">
     <div class="wrap nav-inner">
       <div class="brand">
-        <img src="/assets/logo-kairos.png" alt="Kairos-Fiscal logo" />
-        <span>Kairos-Fiscal</span>
+        <a href="/">
+          <img src="/assets/logo-kairos.png" alt="Kairos-Fiscal logo" />
+        </a>
+        <a href="/" style="color:inherit; text-decoration:none">Kairos-Fiscal</a>
       </div>
       <nav aria-label="Principal" class="mini">
+        <a href="/">Inicio</a>
+        <a href="/servicios">Servicios</a>
         <a href="#contacto">Contacto</a>
       </nav>
     </div>
   </header>
 
   <main class="wrap">
-    <section class="hero" aria-labelledby="h1">
-      <img src="/assets/logo-kairos.png" alt="Kairos-Fiscal logo" />
-      <div class="tagline">Abogados tributarios</div>
-      <h1 id="h1">Estrategias y defensas contra actos de autoridades tributarias.</h1>
-      <p class="sub">Representación ante la Procuraduría de la Defensa del Contribuyente (PRODECON) y el Tribunal Federal de Justicia Administrativa (TFJA). Para que vuelvas a enfocarte en tu negocio.</p>
-      <p class="sub"><strong>Contamos con más de 12 años de experiencia</strong> en materia fiscal y administrativa, brindando soluciones jurídicas efectivas y personalizadas.</p>
+    <header class="page-head">
+      <h1>Servicios</h1>
+      <p class="lead">Defensa y estrategia frente a actos de autoridades tributarias. <strong>Más de 12 años de experiencia</strong> en materia fiscal y administrativa. Cobertura en Querétaro, CDMX y el Bajío.</p>
+    </header>
 
-      <div class="bullets" role="list" aria-label="Cobertura">
-        <span class="chip" role="listitem">Querétaro</span>
-        <span class="chip" role="listitem">CDMX</span>
-        <span class="chip" role="listitem">Bajío</span>
+    <section aria-labelledby="s1">
+      <h2 id="s1" style="margin:0 0 8px">Áreas de especialidad</h2>
+      <div class="grid">
+        <article class="card" aria-labelledby="svc1">
+          <h3 id="svc1">Auditorías SAT y créditos fiscales</h3>
+          <p>Atención de facultades de comprobación, requerimientos, cartas invitación y determinaciones. Estrategia, alegatos y cierre de auditoría.</p>
+          <div class="cta"><a class="btn primary" href="#contacto">Solicitar diagnóstico</a></div>
+        </article>
+
+        <article class="card" aria-labelledby="svc2">
+          <h3 id="svc2">Acuerdos conclusivos ante PRODECON</h3>
+          <p>Ruta para cerrar auditorías con certeza jurídica, reduciendo riesgos y tiempos. Evaluación de viabilidad y preparación integral del caso.</p>
+          <div class="cta"><a class="btn" href="#contacto">Evaluar viabilidad</a></div>
+        </article>
+
+        <article class="card" aria-labelledby="svc3">
+          <h3 id="svc3">Juicios de nulidad (TFJA)</h3>
+          <p>Demanda, agravios y pruebas para anular actos ilegales o desproporcionados. Enfoque en motivación, proporcionalidad y debido proceso.</p>
+          <div class="cta"><a class="btn" href="#contacto">Revisar resoluciones</a></div>
+        </article>
+
+        <article class="card" aria-labelledby="svc4">
+          <h3 id="svc4">Amparos fiscales</h3>
+          <p>Protección federal contra actos de autoridad que vulneren derechos. Incidentes, suspensión y estrategia integral.</p>
+          <div class="cta"><a class="btn" href="#contacto">Ver causales</a></div>
+        </article>
+
+        <article class="card" aria-labelledby="svc5">
+          <h3 id="svc5">Devoluciones y acreditamientos de IVA</h3>
+          <p>Defensa técnica para obtener saldos a favor y acreditar conforme a la ley. Control de plazos de prescripción y soporte documental.</p>
+          <div class="cta"><a class="btn" href="#contacto">Calcular plazos</a></div>
+        </article>
+
+        <article class="card" aria-labelledby="svc6">
+          <h3 id="svc6">Cancelación de sellos / Cuentas inmovilizadas</h3>
+          <p>Acciones urgentes para restablecer la operación. Identificación de causal, evidencia de operaciones reales y restitución de facturación.</p>
+          <div class="cta"><a class="btn" href="#contacto">Atención inmediata</a></div>
+        </article>
       </div>
+      <p class="note">Los casos se describen de forma genérica para proteger la confidencialidad de los clientes.</p>
+    </section>
 
-      <div class="cta">
+    <section class="cta-band" style="margin-top:28px" aria-labelledby="cta">
+      <div>
+        <h2 id="cta" style="margin:0">¿Recibiste una notificación del SAT?</h2>
+        <p style="margin:6px 0 0; color:var(--muted)">El tiempo es defensa. Revisamos tu caso hoy mismo.</p>
+      </div>
+      <div class="cta-actions">
         <a class="btn primary" href="#contacto">Agendar consulta</a>
-        <a class="btn secondary" href="https://wa.me/524421591634?text=Hola%20Kairos-Fiscal.%20Necesito%20asesor%C3%ADa%20fiscal" target="_blank" rel="noopener">WhatsApp</a>
-      </div>
-
-      <div class="meta">
-        <span>📞 <a href="tel:+524421591634">+52 442-159-16-34</a></span>
-        <span>✉️ <a href="mailto:contacto@kairos-fiscal.com">contacto@kairos-fiscal.com</a></span>
+        <a class="btn" target="_blank" rel="noopener" href="https://wa.me/524421591634?text=Hola%20Kairos-Fiscal.%20Necesito%20asesor%C3%ADa%20fiscal">WhatsApp</a>
       </div>
     </section>
 
-    <section id="contacto" class="card" aria-labelledby="c2">
-      <h2 id="c2" style="margin-top:0">Contacto</h2>
-      <p>Teléfono: <a href="tel:+524421591634">+52 442-159-16-34</a> · Email: <a href="mailto:contacto@kairos-fiscal.com">contacto@kairos-fiscal.com</a></p>
-      <form action="https://formspree.io/f/tu-id" method="POST" style="display:grid; gap:12px; max-width:620px; margin:0 auto;">
-        <label>Nombre
-          <input name="nombre" required placeholder="Tu nombre" style="width:100%; padding:12px; border-radius:10px; border:1px solid #cbd5e1" />
-        </label>
-        <label>Email
-          <input type="email" name="email" required placeholder="tu@email" style="width:100%; padding:12px; border-radius:10px; border:1px solid #cbd5e1" />
-        </label>
-        <label>Mensaje
-          <textarea name="mensaje" rows="5" required placeholder="Cuéntame tu caso" style="width:100%; padding:12px; border-radius:10px; border:1px solid #cbd5e1"></textarea>
-        </label>
-        <label style="font-size:14px; color:var(--muted)"><input type="checkbox" name="consentimiento" required /> Acepto el aviso de privacidad.</label>
-        <button class="btn primary" type="submit">Enviar</button>
-      </form>
+    <section id="contacto" class="wrap" style="padding:0; margin-top:34px">
+      <div class="card" aria-labelledby="c2">
+        <h2 id="c2" style="margin-top:0">Contacto</h2>
+        <p>Teléfono: <a href="tel:+524421591634">+52 442-159-16-34</a> · Email: <a href="mailto:contacto@kairos-fiscal.com">contacto@kairos-fiscal.com</a></p>
+        <form action="https://formspree.io/f/tu-id" method="POST" style="display:grid; gap:12px; max-width:620px">
+          <label>Nombre
+            <input name="nombre" required placeholder="Tu nombre" style="width:100%; padding:12px; border-radius:10px; border:1px solid #cbd5e1" />
+          </label>
+          <label>Email
+            <input type="email" name="email" required placeholder="tu@email" style="width:100%; padding:12px; border-radius:10px; border:1px solid #cbd5e1" />
+          </label>
+          <label>Mensaje
+            <textarea name="mensaje" rows="5" required placeholder="Cuéntame tu caso" style="width:100%; padding:12px; border-radius:10px; border:1px solid #cbd5e1"></textarea>
+          </label>
+          <label style="font-size:14px; color:var(--muted)"><input type="checkbox" name="consentimiento" required /> Acepto el aviso de privacidad.</label>
+          <button class="btn primary" type="submit">Enviar</button>
+        </form>
+      </div>
     </section>
   </main>
 
