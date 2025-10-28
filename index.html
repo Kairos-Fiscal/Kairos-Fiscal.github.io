@@ -1,125 +1,193 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" dir="ltr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Kairos Fiscal | Abogado Fiscal en Querétaro — Defensa ante SAT, PRODECON y TFJA</title>
-  <meta name="description" content="Defensa fiscal directa, sin rodeos. Auditorías SAT, acuerdos conclusivos ante PRODECON, juicios de nulidad en TFJA, amparos y devoluciones/ acreditamientos de IVA.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="assets/favicon.ico">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kairos-Fiscal | Abogado fiscal — Estrategias y defensas contra actos tributarios</title>
+  <meta name="description" content="Estrategias y defensas contra actos de autoridades tributarias. Representación ante PRODECON y TFJA. Atención en Querétaro, CDMX y el Bajío. Confidencialidad y plazos por escrito." />
+  <link rel="canonical" href="https://kairos-fiscal.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Kairos-Fiscal | Estrategias y defensas contra actos tributarios" />
+  <meta property="og:description" content="Representación ante PRODECON y TFJA. Atención en Querétaro, CDMX y el Bajío." />
+  <meta property="og:url" content="https://kairos-fiscal.com/" />
+  <meta property="og:image" content="https://kairos-fiscal.com/og-kairos-fiscal.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Kairos-Fiscal | Defensa fiscal directa" />
+  <meta name="twitter:description" content="Estrategias y representación ante PRODECON y TFJA." />
+  <meta name="twitter:image" content="https://kairos-fiscal.com/og-kairos-fiscal.jpg" />
+
+  <link rel="icon" href="/favicon.ico" />
+
+  <style>
+    :root{
+      --bg:#0b1220; /* azul noche */
+      --fg:#e9edf5; /* texto */
+      --muted:#b9c2d3;
+      --accent:#6ee7ff; /* celeste */
+      --accent-2:#90f; /* morado */
+      --btn:#0ea5e9; /* azul botón */
+      --btn-2:#111827; /* gris carbón */
+      --ring: rgba(110, 231, 255, 0.5);
+      --maxw:1120px;
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body{
+      margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, Apple Color Emoji, Segoe UI Emoji;
+      color:var(--fg); background: radial-gradient(80vw 80vw at 80% -10%, rgba(144,0,255,.25), transparent 40%),
+                 radial-gradient(70vw 70vw at -20% 20%, rgba(110,231,255,.20), transparent 40%),
+                 var(--bg);
+    }
+    a{ color:inherit; text-decoration:none }
+    .wrap{ max-width: var(--maxw); margin: 0 auto; padding: 24px; }
+
+    /* NAV */
+    .nav{ position: sticky; top:0; z-index:10; backdrop-filter: saturate(140%) blur(6px); background: rgba(11,18,32,.55); border-bottom: 1px solid rgba(255,255,255,.06); }
+    .nav-inner{ display:flex; align-items:center; justify-content:space-between; gap:16px; }
+    .brand{ display:flex; align-items:center; gap:12px; font-weight:700; letter-spacing:.3px; }
+    .badge{ font-size:12px; color:var(--muted); border:1px solid rgba(255,255,255,.1); padding:4px 8px; border-radius:999px }
+
+    /* HERO */
+    .hero{ padding: clamp(56px, 8vw, 120px) 0; }
+    .hero-grid{ display:grid; grid-template-columns: 1.2fr; gap:28px; align-items:center; }
+    .eyebrow{ display:inline-block; font-size:12px; text-transform:uppercase; letter-spacing:.16em; color:var(--muted); margin-bottom:12px }
+    h1{ font-size: clamp(28px, 4vw, 46px); line-height:1.15; margin:0 0 12px 0; }
+    .sub{ font-size: clamp(16px, 2.1vw, 20px); color: var(--muted); max-width: 65ch; }
+
+    .bullets{ display:flex; flex-wrap:wrap; gap:10px; margin:22px 0 28px }
+    .chip{ font-size:14px; color:#dbeafe; background: rgba(59,130,246,.15); border:1px solid rgba(59,130,246,.35); padding:8px 12px; border-radius:999px }
+
+    .cta{ display:flex; flex-wrap:wrap; gap:12px; margin-top:10px }
+    .btn{ display:inline-flex; align-items:center; gap:8px; padding:12px 16px; border-radius:14px; font-weight:600; border:1px solid transparent; box-shadow: 0 10px 30px rgba(14,165,233,.15) }
+    .btn.primary{ background: var(--btn); color:#00131d; }
+    .btn.primary:focus-visible{ outline: 2px solid var(--ring); outline-offset: 2px }
+    .btn.secondary{ background: transparent; color: var(--fg); border-color: rgba(255,255,255,.18) }
+    .btn.secondary:hover{ background: rgba(255,255,255,.05) }
+
+    .meta{ display:flex; gap:18px; align-items:center; margin-top:18px; color:var(--muted); font-size:14px }
+    .meta a { text-decoration: underline; text-underline-offset: 2px }
+
+    /* ILLUSTRATION placeholder */
+    .card{ border:1px solid rgba(255,255,255,.08); background: linear-gradient( to bottom right, rgba(255,255,255,.05), rgba(255,255,255,.02)); border-radius:18px; padding:18px; }
+
+    @media (min-width: 900px){
+      .hero-grid{ grid-template-columns: 1.1fr .9fr; }
+    }
+  </style>
+
+  <!-- JSON-LD: LegalService + FAQPage (ajusta teléfono e imagen) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LegalService",
+    "name": "Kairos-Fiscal",
+    "url": "https://kairos-fiscal.com/",
+    "image": "https://kairos-fiscal.com/og-kairos-fiscal.jpg",
+    "areaServed": ["Querétaro", "CDMX", "Bajío"],
+    "telephone": "+52-442-000-0000",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Querétaro",
+      "addressCountry": "MX"
+    }
+  }
+  </script>
 </head>
 <body>
-<header class="site-header">
-  <div class="container header-inner">
-    <a class="brand" href="/"><span class="brand-k">K</span>airos<span class="brand-dash">-</span>Fiscal</a>
-    <nav class="nav">
-      <a href="#servicios">Servicios</a>
-      <a href="#por-que">Por qué</a>
-      <a href="contacto.html" class="btn btn-outline">Contacto</a>
-      <a href="https://wa.me/5210000000000?text=Hola%2C%20quisiera%20una%20consulta%20fiscal%20" class="btn btn-primary">WhatsApp</a>
-    </nav>
-  </div>
-</header>
-
-<main>
-<section class="hero">
-  <div class="container hero-inner">
-    <img src="assets/logo.png" alt="Kairos-Fiscal — Abogados tributarios" class="hero-logo">
-    <h1>Defensa fiscal directa, sin rodeos.</h1>
-    <p class="lead">Estrategias claras contra actos del SAT, PRODECON y TFJA — para que vuelvas a enfocarte en tu negocio.</p>
-    <div class="cta-row">
-      <a href="contacto.html" class="btn btn-primary">Agendar consulta</a>
-      <a href="#servicios" class="btn btn-ghost">Ver servicios</a>
+  <header class="nav" role="banner">
+    <div class="wrap nav-inner">
+      <div class="brand">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+          <circle cx="12" cy="12" r="10" stroke="url(#g)" stroke-width="2"/>
+          <path d="M7 13.5L11 8l6 8" stroke="url(#g)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <defs>
+            <linearGradient id="g" x1="0" y1="0" x2="24" y2="24">
+              <stop stop-color="#6ee7ff"/>
+              <stop offset="1" stop-color="#8b5cf6"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <span>Kairos‑Fiscal</span>
+        <span class="badge">Defensa fiscal</span>
+      </div>
+      <nav aria-label="Principal">
+        <a class="badge" href="#contacto">Contacto</a>
+      </nav>
     </div>
-    <p class="micro">Atención en Querétaro y CDMX · Confidencialidad y plazos por escrito</p>
-  </div>
-</section>
+  </header>
 
-<section id="servicios" class="section">
-  <div class="container">
-    <h2>Servicios</h2>
-    <div class="grid3">
-      <div class="card">
-        <h3>Auditorías SAT y créditos fiscales</h3>
-        <p>Atención de facultades de comprobación, requerimientos, cartas invitación y determinaciones.</p>
-      </div>
-      <div class="card">
-        <h3>Acuerdos conclusivos ante PRODECON</h3>
-        <p>Estrategia para cerrar auditorías con certeza jurídica y reducción de riesgos.</p>
-      </div>
-      <div class="card">
-        <h3>Juicios de nulidad (TFJA)</h3>
-        <p>Demanda, agravios y pruebas para anular actos ilegales o desproporcionados.</p>
-      </div>
-      <div class="card">
-        <h3>Amparos fiscales</h3>
-        <p>Protección federal contra actos que violen derechos fundamentales en materia fiscal.</p>
-      </div>
-      <div class="card">
-        <h3>Devoluciones y acreditamientos de IVA</h3>
-        <p>Defensa técnica para obtener saldos a favor y acreditar conforme a la ley.</p>
-      </div>
-      <div class="card">
-        <h3>Cancelación de sellos / Cuentas inmovilizadas</h3>
-        <p>Acciones urgentes para restablecer la operación de tu empresa.</p>
-      </div>
-    </div>
-  </div>
-</section>
+  <main id="contenido" class="wrap">
+    <section class="hero" aria-labelledby="h1">
+      <div class="hero-grid">
+        <div>
+          <span class="eyebrow">Abogado fiscal</span>
+          <h1 id="h1">Estrategias y defensas contra actos de autoridades tributarias.</h1>
+          <p class="sub">
+            Representación ante la Procuraduría de la Defensa del Contribuyente (PRODECON) y el Tribunal Federal de Justicia Administrativa (TFJA). Para que vuelvas a enfocarte en tu negocio.
+          </p>
 
-<section id="por-que" class="section alt">
-  <div class="container">
-    <h2>Por qué Kairos-Fiscal</h2>
-    <ul class="bullets">
-      <li><strong>Estrategia, no improvisación.</strong> Demandas, agravios y recursos hechos a medida.</li>
-      <li><strong>Lenguaje claro.</strong> Te explico el “qué” y el “por qué” antes de actuar.</li>
-      <li><strong>Plazos y riesgos por escrito.</strong> Nada de sorpresas.</li>
-    </ul>
-  </div>
-</section>
+          <div class="bullets" role="list" aria-label="Cobertura">
+            <span class="chip" role="listitem">Querétaro</span>
+            <span class="chip" role="listitem">CDMX</span>
+            <span class="chip" role="listitem">Bajío</span>
+          </div>
 
-<section class="section">
-  <div class="container">
-    <h2>Casos y criterios</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>IVA acreditado validado</h3>
-        <p>Se acreditaron saldos a favor tras desahogo documental y criterios aplicables.</p>
+          <div class="cta">
+            <a class="btn primary" href="#contacto" aria-label="Agendar consulta">Agendar consulta</a>
+            <a class="btn secondary" href="https://wa.me/524420000000?text=Hola%20Kairos-Fiscal.%20Necesito%20asesor%C3%ADa%20fiscal" rel="noopener" target="_blank" aria-label="WhatsApp">WhatsApp</a>
+          </div>
+
+          <div class="meta" aria-label="Datos de contacto">
+            <span>📞 <a href="tel:+524420000000">+52 442 000 0000</a></span>
+            <span>✉️ <a href="mailto:contacto@kairos-fiscal.com">contacto@kairos-fiscal.com</a></span>
+          </div>
+        </div>
+
+        <aside class="card" aria-label="Ilustración descriptiva">
+          <picture>
+            <source srcset="/hero-illustration.webp" type="image/webp" />
+            <img src="/hero-illustration.png" alt="Gráfico abstracto de defensa fiscal y balance" width="640" height="420" loading="eager" />
+          </picture>
+          <p style="margin:12px 4px 0; color:var(--muted); font-size:14px">*Puedes sustituir la imagen por tu propia ilustración o foto corporativa.*</p>
+        </aside>
       </div>
-      <div class="card">
-        <h3>Cuentas desbloqueadas</h3>
-        <p>Medidas cautelares revertidas con argumentación y pruebas de operación.</p>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<section class="cta section alt">
-  <div class="container cta-inner">
-    <h2>¿Recibiste una notificación del SAT?</h2>
-    <p>Tiempo es defensa. Reviso tu caso hoy mismo.</p>
-    <a href="contacto.html" class="btn btn-primary">Revisar mi caso</a>
-  </div>
-</section>
-</main>
+    <!-- Sección de contacto mínima para anclar CTA -->
+    <section id="contacto" class="card" aria-labelledby="contacto-h2">
+      <h2 id="contacto-h2" style="margin-top:0">Contacto</h2>
+      <p>Teléfono: <a href="tel:+524420000000">+52 442 000 0000</a> · Email: <a href="mailto:contacto@kairos-fiscal.com">contacto@kairos-fiscal.com</a></p>
+      <form action="https://formspree.io/f/tu-id" method="POST" style="display:grid; gap:12px; max-width:620px;">
+        <label>Nombre
+          <input name="nombre" required placeholder="Tu nombre" style="width:100%; padding:12px; border-radius:10px; border:1px solid rgba(255,255,255,.18); background:rgba(255,255,255,.04); color:var(--fg)" />
+        </label>
+        <label>Email
+          <input type="email" name="email" required placeholder="tu@email" style="width:100%; padding:12px; border-radius:10px; border:1px solid rgba(255,255,255,.18); background:rgba(255,255,255,.04); color:var(--fg)" />
+        </label>
+        <label>Mensaje
+          <textarea name="mensaje" rows="5" required placeholder="Cuéntame tu caso" style="width:100%; padding:12px; border-radius:10px; border:1px solid rgba(255,255,255,.18); background:rgba(255,255,255,.04); color:var(--fg)"></textarea>
+        </label>
+        <label style="font-size:14px; color:var(--muted)">
+          <input type="checkbox" name="consentimiento" required /> Acepto el aviso de privacidad.
+        </label>
+        <button class="btn primary" type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
 
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <div>
-      <strong>Kairos-Fiscal</strong><br>
-      Despacho Fiscal-Administrativo<br>
-      Querétaro, México
-    </div>
-    <div>
-      <a href="contacto.html">Contacto</a><br>
-      <a href="#">Aviso de privacidad</a>
-    </div>
-    <div class="micro">© <span id="y"></span> Kairos-Fiscal. Todos los derechos reservados.</div>
-  </div>
-</footer>
-<script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+  <footer class="wrap" style="opacity:.8; padding-bottom:48px">
+    <hr style="border-color: rgba(255,255,255,.12)" />
+    <p style="font-size:14px; color:var(--muted)">© <span id="y"></span> Kairos‑Fiscal · Defensa fiscal directa, sin rodeos.</p>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
